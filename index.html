@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+<style>
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #333; /* Dark gray background */
+    color: #000; /* Black font color */
+
+
+
+
+  }
+  .header {
+    background-color: rgb(78 78 78 / 50%);
+
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s;
+    backdrop-filter: blur(10px); /* Increased blur effect */
+  }
+  .logo {
+    display: block;
+    margin: auto;
+    margin-left: 9rem;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+  }
+  .description {
+    text-align: center;
+    padding: 50px 20px 0; /* Reduced top padding */
+    color: #fff; /* Description text color changed to white */
+    position: relative; /* Ensure it's visible under the header */
+    padding-top: 80px; /* Add space for the fixed header */
+  }
+  .back-icon {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+font-size:24px;
+color:white;
+  }
+  .search-box {
+    border-radius: 10px;
+        padding: 10px 20px;
+        margin: 0 auto 20px;
+        width: 80%;
+        background-color: #252525;
+    /*    box-shadow: inset 1px 1px 8px 20px #251a1a; */
+        border-style: none;
+        color: white;
+  }
+
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Changed to space-around for even spacing */
+    padding: 20px; /* Reduced padding */
+
+  }
+  .card {
+    flex-basis: calc(50% - 20px); /* Adjusted for two cards per row */
+    border-radius: 15px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s;
+    opacity: 1; /* 80% transparency */
+    margin-bottom: 20px; /* Added space between rows */
+    color: #000; /* Black font color */
+   /*  border: 1px solid #ddd; Border added back */
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card-header {
+    background-color: #1a1a1a;
+    padding: 10px;
+    text-align: center; /* Centered card name */
+color: white;
+background-color: #1a1a1a;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.02' fill='%23000000'/%3E%3C/svg%3E");
+
+
+  }
+  .card-logo {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;
+    background-color: #ddd;
+    display: block; /* Ensures no inline spacing */
+    margin: 0 auto 10px; /* Centered logo */
+  }
+  .card-name {
+    font-weight: bold;
+    display: block; /* Ensures no inline spacing */
+    margin-bottom: 10px; /* Space below the name */
+  }
+  .card-info {
+    padding: 10px;
+    background-color: #252525;
+    font-size: 0.8em; /* Smaller font size for total players */
+    color: white;
+  }
+.status-light {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  animation: smoothBlinker 1.5s ease-in-out infinite;
+}
+
+@keyframes smoothBlinker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .gray {
+    background-color: gray;
+  }
+  .to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: white;
+    border-radius: 50rem;
+    padding: 0.5rem;
+box-shadow: 0px 2px 7px #4d4d4d;
+  }
+
+  /* Responsive adjustments for mobile view */
+  @media (max-width: 600px) {
+    .card-container {
+      padding: 10px; /* Reduced padding for mobile */
+    }
+    .card {
+   /*   flex-basis: 100%;  Full width cards on mobile */
+      margin-bottom: 10px; /* Reduced space between cards */
+    }
+    .card-logo {
+      width: 120px; /* Fixed width to prevent deformation */
+      height: 120px; /* Fixed height to maintain aspect ratio */
+      object-fit: cover; /* Ensures the image doesn't get distorted */
+    }
+  }
+</style>
+</head>
+<body>
+
+/**********************************************************/
+
+<div class="header">
+  <a href="https://t.me/cointapz"><img src="logo.png" alt="Logo" class="logo"></a>
+  <div class="back-icon" onclick="history.back()">🡰</div>
+</div>
+
+<div class="description">
+  <p>A Big List of Tap Bots Are Here! Enjoy 😉</p>
+  <p>به کانال خودتون هم سر بزنید، کلی اخبار جذاب داریم</p>
+</div>
+
+<div class="search-container" style="text-align: center;">
+  <input type="text" class="search-box" placeholder="Search..." oninput="searchCard()">
+</div>
+<div class="card-container" id="card-container"  >
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="hamster.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">Hamster Kombat</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +100M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="tapswap.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">TapSwap</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +40M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+
+
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="notcoin.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">Notcoin</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +35M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="catizen.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">Catizen</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +15M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+
+
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="memefi.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">Memefi</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +10M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+
+  <!-- Repeat this block for each card -->
+  <a href="link-to-somewhere" class="card">
+    <div class="card-header">
+      <img src="yescoin.jpg" alt="Card Logo" class="card-logo">
+      <span class="card-name">Yescoin</span>
+    </div>
+    <div class="card-info">
+<div>Total Players: +10M</div>
+      <div><span class="status-light green"></span><b>Active</b></div>
+    </div>
+  </a>
+  <!-- End of card block -->
+
+
+</div>
+
+
+<p align="center" style="color:white;"> @Cointapz copyright all rights reserved </p>
+
+
+
+<div class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⮬ Top</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.header');
+    var toTopButton = document.querySelector('.to-top');
+    if (window.pageYOffset > 100) {
+      header.classList.add('small');
+      toTopButton.style.display = 'block';
+    } else {
+      header.classList.remove('small');
+      toTopButton.style.display = 'none';
+    }
+  });
+
+  function searchCard() {
+    var input = document.querySelector('.search-box').value.toLowerCase();
+    var cards = document.querySelectorAll('.card');
+    for (var i = 0; i < cards.length; i++) {
+      var name = cards[i].querySelector('.card-name').textContent.toLowerCase();
+      if (name.includes(input)) {
+        cards[i].style.display = '';
+      } else {
+        cards[i].style.display = 'none';
+      }
+    }
+  }
+</script>
+
+</body>
+</html>
