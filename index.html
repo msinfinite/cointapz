@@ -169,6 +169,27 @@ box-shadow: 0px 2px 7px #4d4d4d;
       height: 120px; /* Fixed height to maintain aspect ratio */
       object-fit: cover; /* Ensures the image doesn't get distorted */
     }
+
+
+
+.card {
+  position: relative; /* این به .icon اجازه می‌دهد تا نسبت به .card موقعیت‌دهی شود */
+}
+
+.icon {
+  position: absolute;
+  top: 10px; /* فاصله از بالا */
+  right: 10px; /* فاصله از سمت راست */
+  width: 20px; /* عرض آیکن */
+  height: 20px; /* ارتفاع آیکن */
+  /* اضافه کردن تصویر آیکن */
+  background-image: url('icon-path.png');
+  background-size: cover;
+}
+
+
+    
+    
   }
 </style>
 </head>
@@ -192,6 +213,9 @@ box-shadow: 0px 2px 7px #4d4d4d;
 <div class="card-container" id="card-container"  >
   <!-- Repeat this block for each card -->
   <a href="link-to-somewhere" class="card">
+
+  <div class="icon"><img src="fire.png"></div> <!-- آیکن جدید اضافه شده -->
+    
     <div class="card-header">
       <img src="hamster.jpg" alt="Card Logo" class="card-logo">
       <span class="card-name">Hamster Kombat</span>
