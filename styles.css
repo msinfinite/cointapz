@@ -165,7 +165,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     cursor: pointer;
     background-color: #252525;
     border-radius: 50rem;
-    padding: 0.5rem;
+	  
+    padding-right: 0.8rem;
+    padding-left: 1rem;
+    padding-top: 0.9rem;
+    padding-bottom: 0.6rem;
 
   }
 
