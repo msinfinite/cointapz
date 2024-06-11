@@ -163,10 +163,10 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     bottom: 40px;
     right: 20px;
     cursor: pointer;
-    background: white;
+    background-color: rgb(118, 246, 52 / 80%);
     border-radius: 50rem;
     padding: 0.5rem;
-box-shadow: 0px 2px 7px #1f1f1f;
+
   }
 
   /* Responsive adjustments for mobile view */
