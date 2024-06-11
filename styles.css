@@ -1,9 +1,32 @@
+
+
+ /* Basic styling for the navigation bar */
+        ul.nav {
+            display: flex;
+            list-style: none;
+	    color: white;
+	    margin-bottom: 30px;
+        }
+        li.nav-item {
+            margin-right: 30px;
+            border-bottom: 2px solid transparent;
+            font-family: sans-serif; /* Sans-serif font */
+            transition: border-color 0.3s; /* Smooth animation */
+        }
+        li.nav-item.active {
+            border-bottom-color: gold;
+            margin-bottom: -4px; /* Extend the underline down */
+            font-weight: bold; /* Bold font */
+        }
+
+
+
 body, html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     font-family: "Vazirmatn", sans-serif;
-    background-color: #333; /* Dark gray background */
+    background-color: #1E1E1E; /* Dark gray background */
     color: #000; /* Black font color */
 /* disable horizontal scroll */
     max-width: 100%;
@@ -11,7 +34,7 @@ body, html {
 
   }
   .header {
-    background-color: rgb(78 78 78 / 50%);
+    background-color: rgb(118, 246, 52 / 80%);
 
     padding-block: 10px;
     text-align: center;
@@ -72,7 +95,7 @@ color:white;
     transition: transform 0.3s;
     opacity: 1; /* 80% transparency */
     margin-bottom: 20px; /* Added space between rows */
-    color: #000; /* Black font color */
+    color: #3B3B3B; /* Black font color */
    /*  border: 1px solid #ddd; Border added back */
   }
   .card:hover {
@@ -80,11 +103,11 @@ color:white;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   }
   .card-header {
-    background-color: #1a1a1a;
+    background-color: #3B3B3B;
     padding: 10px;
     text-align: center; /* Centered card name */
 color: white;
-background-color: #1a1a1a;
+background-color: #3B3B3B;
 background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.02' fill='%23000000'/%3E%3C/svg%3E");
 
 
@@ -93,7 +116,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     width: 100%; /* Full width */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%;
-    background-color: #000;
+    background-color: #3B3B3B;
     display: block; /* Ensures no inline spacing */
     margin: 0 auto 10px; /* Centered logo */
   }
@@ -104,7 +127,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   }
   .card-info {
     padding: 10px;
-    background-color: #252525;
+    background-color: #3B3B3B;
     font-size: 0.8em; /* Smaller font size for total players */
     color: white;
   }
@@ -137,13 +160,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .to-top {
     display: none;
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     right: 20px;
     cursor: pointer;
     background: white;
     border-radius: 50rem;
     padding: 0.5rem;
-box-shadow: 0px 2px 7px #4d4d4d;
+box-shadow: 0px 2px 7px #1f1f1f;
   }
 
   /* Responsive adjustments for mobile view */
