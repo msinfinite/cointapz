@@ -137,7 +137,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
-  animation: smoothBlinker 1.5s ease-in-out infinite;
+  animation: smoothBlinker 1s ease-in-out infinite;
 }
 
 @keyframes smoothBlinker {
