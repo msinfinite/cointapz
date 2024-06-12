@@ -1336,21 +1336,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 
-function disableSelect(event) {
-    event.preventDefault();
-}
-
-function startDrag(event) {
-    window.addEventListener('mouseup', onDragEnd);
-    window.addEventListener('selectstart', disableSelect);
-    // ... my other code
-}
-
-function onDragEnd() {
-    window.removeEventListener('mouseup', onDragEnd);
-    window.removeEventListener('selectstart', disableSelect);
-    // ... my other code
-}
 
 
 </script>
