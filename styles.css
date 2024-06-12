@@ -160,16 +160,16 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .to-top {
     display: none;
     position: fixed;
-    bottom: 40px;
+    bottom: 60px;
     right: 20px;
     cursor: pointer;
     background-color: #252525;
     border-radius: 50rem;
 	  
     padding-right: 0.8rem;
-    padding-left: 1rem;
-    padding-top: 0.9rem;
-    padding-bottom: 0.6rem;
+    padding-left: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
 
   }
 
