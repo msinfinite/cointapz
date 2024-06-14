@@ -10,6 +10,11 @@
   align-items: center;
 }
 
+#loading {
+  z-index: 9999; /* Adjust as needed */
+  /* Other styles... */
+}
+
 
 
 
