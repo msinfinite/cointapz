@@ -12,6 +12,13 @@
 
 /**********************************************************/
 
+<div id="loading">
+  <img id="loading-image" src="loading.svg" alt="Loading..." />
+</div>
+
+
+  
+
 <div class="header">
   <a href="https://t.me/cointapz"><img src="logo.png" alt="Logo" class="logo"></a>
   <div class="back-icon" onclick="history.back()"><img src="back.png" width="24" height="24"></div>
@@ -1294,6 +1301,14 @@
 <div class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><img src="up.svg" width="24" height="24"></div>
 
 <script>
+
+window.addEventListener('load', function () {
+  document.getElementById('loading').style.display = 'none';
+});
+
+  
+
+  
   window.addEventListener('scroll', function() {
     var header = document.querySelector('.header');
     var toTopButton = document.querySelector('.to-top');
