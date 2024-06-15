@@ -172,8 +172,6 @@
 
 
     <!-- Repeat this block for each card -->
-      <div class="cards-container">
-
   <a href="http://t.me/BlumCryptoBot/app?startapp=ref_d3XKhi1ipR" class="card" id="card2">
         <div class="icon"><img src="trend.svg"></div>
 
@@ -187,7 +185,6 @@
       <div><span class="status-light green"></span><b>Active</b></div>
     </div>
   </a>
-            </div>
   <!-- End of card block -->
 
 
@@ -1420,36 +1417,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
   
 
-// No need to add event listener for DOMContentLoaded as CSS handles visibility
-
-    const navItems = document.querySelectorAll('.nav-item');
-    const cards = document.querySelectorAll('.card');
-
-    navItems.forEach(item => {
-        item.addEventListener('click', () => {
-            if (item.id === 'showAll') {
-                // Show all cards when "Show All" is clicked
-                cards.forEach(card => card.style.display = 'block');
-            } else {
-                // Hide the corresponding card if it's not the active one
-                const cardId = item.id.replace('option', 'card');
-                cards.forEach(card => {
-                    if (card.id === cardId) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-            // Add 'active' class to the clicked nav item
-            navItems.forEach(nav => nav.classList.remove('active'));
-            item.classList.add('active');
-        });
-    });
-  
-
-    // Sort the cards by player count only with js
-  <div class="cards-container">
 
 
 
