@@ -33,9 +33,9 @@
   <p>به کانال خودتون هم سر بزنید، کلی اخبار جذاب داریم</p>
 </div>
 
-<div class="search-container" style="text-align: center;">
-  <input type="text" class="search-box" placeholder="Search..." oninput="searchCard()">
-    <button onclick="clearSearch()" class="clear-btn">X</button>
+<div class="search-container" style="text-align: center; position: relative;">
+  <input type="text" class="search-box" placeholder="Search..." oninput="searchCard()" onkeyup="toggleClearButton()">
+  <button onclick="clearSearch()" class="clear-btn">X</button>
 </div>
 
   <div class="card-container" id="card-container"  >
@@ -1413,11 +1413,34 @@ window.addEventListener('load', function () {
   }
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-  function clearSearch() {
-  document.querySelector('.search-box').value = '';
+
+  //clear search
+
+function toggleClearButton() {
+  var input = document.querySelector('.search-box');
+  var clearBtn = document.querySelector('.clear-btn');
+  if (input.value.length > 0) {
+    clearBtn.style.display = 'block';
+  } else {
+    clearBtn.style.display = 'none';
+  }
+}
+
+function clearSearch() {
+  var input = document.querySelector('.search-box');
+  input.value = '';
+  input.focus(); // Keep focus on the search box
+  toggleClearButton(); // Hide the clear button
   searchCard(); // To reset the card display
 }
 
+// Call toggleClearButton on page load in case there's already text in the search box
+document.addEventListener('DOMContentLoaded', toggleClearButton);
+
+
+
+
+  
 
 
     const navItems = document.querySelectorAll('.nav-item');
