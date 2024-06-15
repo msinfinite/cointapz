@@ -35,6 +35,7 @@
 
 <div class="search-container" style="text-align: center;">
   <input type="text" class="search-box" placeholder="Search..." oninput="searchCard()">
+    <button onclick="clearSearch()" class="clear-btn">X</button>
 </div>
 
   <div class="card-container" id="card-container"  >
@@ -1411,6 +1412,11 @@ window.addEventListener('load', function () {
     }
   }
 document.addEventListener('contextmenu', event => event.preventDefault());
+
+  function clearSearch() {
+  document.querySelector('.search-box').value = '';
+  searchCard(); // To reset the card display
+}
 
 
 
