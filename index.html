@@ -106,6 +106,7 @@
 
 
   <!-- Repeat this block for each card -->
+    <div class="cards-container">
   <a href="https://t.me/catizenbot/gameapp?startapp=rp_1102833" class="card">
     
     <div class="card-header">
@@ -118,6 +119,7 @@
       <div><span class="status-light green"></span><b>Active</b></div>
     </div>
   </a>
+    </div>
   <!-- End of card block -->
 
 
@@ -1419,13 +1421,6 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 // No need to add event listener for DOMContentLoaded as CSS handles visibility
 
-
-
-
-
-  
-
-
     const navItems = document.querySelectorAll('.nav-item');
     const cards = document.querySelectorAll('.card');
 
@@ -1452,41 +1447,8 @@ document.addEventListener('contextmenu', event => event.preventDefault());
     });
   
 
-
-
-  
-
     // Sort the cards by player count only with js
-  function getPlayerCountValue(playerCount) {
-  let value = parseFloat(playerCount);
-  if (playerCount.includes('M')) {
-    value *= 1e6; // Convert millions
-  } else if (playerCount.includes('K')) {
-    value *= 1e3; // Convert thousands
-  }
-  return value;
-}
-
-function sortCards() {
-  // Select the container that holds all the cards
-  const container = document.querySelector('#card-container');
-
-  // Get all card elements as an array
-  const cards = Array.from(container.children);
-
-  // Sort the cards array by player count
-  cards.sort((a, b) => {
-    const playersA = getPlayerCountValue(a.querySelector('.card-info div').textContent.trim().match(/\+?(\d+[\.\d+]?[MK]?)/)[1]);
-    const playersB = getPlayerCountValue(b.querySelector('.card-info div').textContent.trim().match(/\+?(\d+[\.\d+]?[MK]?)/)[1]);
-    return playersB - playersA; // Sort in descending order
-  });
-
-  // Append sorted cards back to the container
-  cards.forEach(card => container.appendChild(card));
-}
-
-// Call sortCards to sort the cards when needed
-sortCards();
+  <div class="cards-container">
 
 
 
