@@ -99,6 +99,20 @@ color:white;
   }
 
 
+.clear-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
+
+
+
   .card-container {
     display: flex;
     flex-wrap: wrap;
