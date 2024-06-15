@@ -93,36 +93,36 @@ color:white;
 
 /**SEARCH BOX **/
 
-.input-wrapper {
+.input-container {
   position: relative;
-  display: inline-block;
+  width: 80%;
+  margin: 0 auto 20px;
 }
 
 .search-box {
   border-radius: 10px;
   padding: 10px 20px;
-  margin: 0 auto 20px;
-  width: calc(100% - 40px); /* Adjust width to make space for the clear button */
+  width: 100%;
   background-color: #252525;
-  border-style: none;
+  border: none;
   color: white;
 }
 
-.clear-btn {
+#clear-btn {
   position: absolute;
-  right: 10px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  color: white;
-  cursor: pointer;
   background-color: transparent;
   border: none;
+  color: white;
+  cursor: pointer;
   display: none; /* Hide by default */
 }
 
-.search-box:focus + .clear-btn,
-.search-box:not(:placeholder-shown) + .clear-btn {
-  display: block; /* Show only when the search box is focused or has text */
+.search-box:focus + #clear-btn,
+.search-box:not(:placeholder-shown) + #clear-btn {
+  display: block; /* Show when the search box is focused or has text */
 }
 
 
