@@ -1419,37 +1419,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 
-function sortCards() {
-  // Get all the card elements into an array
-  var cards = Array.from(document.querySelectorAll('.card'));
 
-  // Function to convert player count string to a number
-  function getPlayerCount(card) {
-    var countText = card.querySelector('.card-info div').textContent;
-    var countValue = parseFloat(countText.replace(/[^\d.]/g, ''));
-    if (countText.includes('M')) {
-      return countValue * 1000000;
-    } else if (countText.includes('K')) {
-      return countValue * 1000;
-    } else {
-      return countValue;
-    }
-  }
-
-  // Sort the cards array by player count
-  cards.sort(function(a, b) {
-    return getPlayerCount(b) - getPlayerCount(a);
-  });
-
-  // Append sorted cards back to the container
-  var container = document.querySelector('.card-container');
-  cards.forEach(function(card) {
-    container.appendChild(card);
-  });
-}
-
-// Call this function after your page has loaded
-sortCards();
 
 
   
