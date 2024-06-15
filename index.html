@@ -1412,25 +1412,7 @@ window.addEventListener('load', function () {
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 
-  //clear search
 
-
-function toggleClearButton() {
-    var input = document.getElementById('search-box');
-    var clearBtn = document.getElementById('clear-btn');
-    if (input.value.length > 0) {
-        clearBtn.style.display = 'block';
-    } else {
-        clearBtn.style.display = 'none';
-    }
-}
-
-function clearSearch() {
-    var input = document.getElementById('search-box');
-    input.value = '';
-    input.focus();
-    toggleClearButton();
-}
 
 
   
