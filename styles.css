@@ -45,7 +45,10 @@ body, html {
     padding: 0;
     scroll-behavior: smooth;
     font-family: "Vazirmatn", sans-serif;
-    background-color: #1E1E1E; /* Dark gray background */
+/*    background-color: #1E1E1E;  Dark gray background */
+    background-image: url('bg.svg');
+    background-repeat: repeat;
+	
     color: #000; /* Black font color */
 /* disable horizontal scroll */
     max-width: 100%;
