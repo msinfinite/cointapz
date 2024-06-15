@@ -88,25 +88,46 @@ font-size:24px;
 color:white;
   }
 
- .search-box {
+
+
+
+/**SEARCH BOX **/
+
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.search-box {
   border-radius: 10px;
   padding: 10px 20px;
   margin: 0 auto 20px;
-  width: 80%;
+  width: calc(100% - 40px); /* Adjust width to make space for the clear button */
   background-color: #252525;
   border-style: none;
   color: white;
-  background-image: url('path_to_your_clear_icon.png'); /* Add your clear icon image path here */
-  background-repeat: no-repeat;
-  background-position: right 10px center;
 }
 
-.search-box:not(:placeholder-shown):not(:focus)::after {
-  content: 'X';
+.clear-btn {
   position: absolute;
   right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   color: white;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none; /* Hide by default */
 }
+
+.search-box:focus + .clear-btn,
+.search-box:not(:placeholder-shown) + .clear-btn {
+  display: block; /* Show only when the search box is focused or has text */
+}
+
+
+
+
 
 
 
