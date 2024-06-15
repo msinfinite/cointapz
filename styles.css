@@ -87,28 +87,25 @@ body, html {
 font-size:24px;
 color:white;
   }
-  .search-box {
-    border-radius: 10px;
-        padding: 10px 20px;
-        margin: 0 auto 20px;
-        width: 80%;
-        background-color: #252525;
-    /*    box-shadow: inset 1px 1px 8px 20px #251a1a; */
-        border-style: none;
-        color: white;
-  }
 
-
-.clear-btn {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  border: none;
+ .search-box {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 0 auto 20px;
+  width: 80%;
+  background-color: #252525;
+  border-style: none;
   color: white;
-  cursor: pointer;
-  display: none;
+  background-image: url('path_to_your_clear_icon.png'); /* Add your clear icon image path here */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.search-box:not(:placeholder-shown):not(:focus)::after {
+  content: 'X';
+  position: absolute;
+  right: 10px;
+  color: white;
 }
 
 
