@@ -33,10 +33,10 @@
   <p>به کانال خودتون هم سر بزنید، کلی اخبار جذاب داریم</p>
 </div>
 
-<div class="search-container" style="text-align: center; position: relative;">
-  <div class="input-wrapper">
-    <input type="text" class="search-box" placeholder="Search..." oninput="searchCard()" onkeyup="toggleClearButton()">
-    <span class="clear-btn" onclick="clearSearch()">X</span>
+<div class="search-container" style="text-align: center;">
+  <div class="input-container">
+    <input type="text" id="search-box" class="search-box" placeholder="Search..." oninput="searchCard()">
+    <span id="clear-btn" onclick="clearSearch()">×</span>
   </div>
 </div>
 
@@ -1419,19 +1419,26 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
   //clear search
 
+
 function toggleClearButton() {
-  var input = document.querySelector('.search-box');
-  var clearBtn = document.querySelector('.clear-btn');
-  
-  // No need to manually show/hide as CSS will take care of it
+    var input = document.getElementById('search-box');
+    var clearBtn = document.getElementById('clear-btn');
+    if (input.value.length > 0) {
+        clearBtn.style.display = 'block';
+    } else {
+        clearBtn.style.display = 'none';
+    }
 }
 
 function clearSearch() {
-  var input = document.querySelector('.search-box');
-  input.value = '';
-  input.focus(); // Keep focus on the search box
-  searchCard(); // To reset the card display
+    var input = document.getElementById('search-box');
+    input.value = '';
+    input.focus();
+    toggleClearButton();
 }
+
+
+  
 
 // No need to add event listener for DOMContentLoaded as CSS handles visibility
 
