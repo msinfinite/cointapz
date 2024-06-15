@@ -1437,6 +1437,39 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 
 
+  function getPlayerCountValue(playerCount) {
+  let value = parseFloat(playerCount);
+  if (playerCount.includes('M')) {
+    value *= 1e6; // Convert millions
+  } else if (playerCount.includes('K')) {
+    value *= 1e3; // Convert thousands
+  }
+  return value;
+}
+
+function sortCards() {
+  // Select the container that holds all the cards
+  const container = document.querySelector('#card-container');
+
+  // Get all card elements as an array
+  const cards = Array.from(container.children);
+
+  // Sort the cards array by player count
+  cards.sort((a, b) => {
+    const playersA = getPlayerCountValue(a.querySelector('.card-info div').textContent.trim().match(/\+?(\d+[\.\d+]?[MK]?)/)[1]);
+    const playersB = getPlayerCountValue(b.querySelector('.card-info div').textContent.trim().match(/\+?(\d+[\.\d+]?[MK]?)/)[1]);
+    return playersB - playersA; // Sort in descending order
+  });
+
+  // Append sorted cards back to the container
+  cards.forEach(card => container.appendChild(card));
+}
+
+// Call sortCards to sort the cards when needed
+sortCards();
+
+
+
 
 </script>
 
