@@ -20,23 +20,34 @@
 
 
  /* Basic styling for the navigation bar */
-        ul.nav {
-            display: flex;
-            list-style: none;
-	    color: white;
-	    margin-bottom: 30px;
-        }
-        li.nav-item {
-            margin-right: 42px;
-            border-bottom: 2px solid transparent;
-            font-family: sans-serif; /* Sans-serif font */
-            transition: border-color 0.3s; /* Smooth animation */
-        }
-        li.nav-item.active {
-            border-bottom-color: gold;
-            margin-bottom: -4px; /* Extend the underline down */
-            font-weight: bold; /* Bold font */
-        }
+/* Basic styling for the navigation bar */
+ul.nav {
+  display: flex;
+  list-style: none;
+  color: white;
+  margin-bottom: 30px;
+}
+
+li.nav-item {
+  margin-right: 20px; /* Adjust spacing between items */
+  font-family: sans-serif;
+  transition: border-color 0.3s;
+}
+
+li.nav-item.active {
+  border-bottom-color: gold;
+  margin-bottom: -4px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  li.nav-item {
+    margin-right: 10px; /* Reduce spacing for smaller screens */
+  }
+}
+
+
 
 
 
