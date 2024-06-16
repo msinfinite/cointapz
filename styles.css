@@ -47,6 +47,14 @@ li.nav-item.active {
   }
 }
 
+/* For tablets (between 600px and 768px): */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  li.nav-item {
+    margin-right: 15px; /* Adjust spacing for tablets */
+  }
+}
+
+
 
 
 
