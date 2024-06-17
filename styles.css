@@ -31,11 +31,6 @@ ul.nav {
     list-style: none;
     color: white;
     margin-bottom: 30px;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-around;
-    align-items: baseline;
 }
 
         li.nav-item {
