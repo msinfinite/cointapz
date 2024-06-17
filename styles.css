@@ -1,9 +1,6 @@
 
 
 
-
-
-
 #loading {
   position: fixed;
   top: 0;
@@ -31,6 +28,7 @@ ul.nav {
     list-style: none;
     color: white;
     margin-bottom: 30px;
+    justify-content: center;
 }
 
         li.nav-item {
