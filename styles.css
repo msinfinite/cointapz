@@ -55,12 +55,18 @@
 
 
  /* Basic styling for the navigation bar */
-        ul.nav {
-            display: flex;
-            list-style: none;
-	    color: white;
-	    margin-bottom: 30px;
-        }
+ul.nav {
+    display: flex;
+    list-style: none;
+    color: white;
+    margin-bottom: 30px;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
         li.nav-item {
             margin-right: 42px;
             border-bottom: 2px solid transparent;
