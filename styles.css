@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+ backdrop-filter: blur(10px); /* Increased blur effect */
   display: flex;
   justify-content: center;
   align-items: center;
