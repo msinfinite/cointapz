@@ -132,7 +132,7 @@ color:white;
 
   }
   .card {
-    flex-basis: calc(50% - 20px); /* Adjusted for two cards per row */
+/*     flex-basis: calc(50% - 20px);   Adjusted for two cards per row */
     border-radius: 15px;
     overflow: hidden;
     text-decoration: none;
@@ -225,6 +225,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     .card {
    /*   flex-basis: 100%;  Full width cards on mobile */
       margin-bottom: 10px; /* Reduced space between cards */
+      flex-basis: calc(50% - 20px); /* two cards in a row for mobile */
     }
     .card-logo {
       width: 120px; /* Fixed width to prevent deformation */
