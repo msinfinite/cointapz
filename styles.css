@@ -127,7 +127,8 @@ color:white;
   .card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Changed to space-around for even spacing */
+   /*  justify-content: space-around; Changed to space-around for even spacing */
+ justify-content: center;
     padding: 20px; /* Reduced padding */
 
   }
