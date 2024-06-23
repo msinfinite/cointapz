@@ -1,4 +1,9 @@
-
+  .card-info img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; /* Set the desired icon size */
+  }
 
 
 #loading {
@@ -189,6 +194,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-color: #333333;
     font-size: 0.8em; /* Smaller font size for total players */
     color: white;
+    position: relative; /* Add this */
   }
 .status-light {
   width: 10px;
