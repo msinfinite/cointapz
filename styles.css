@@ -138,7 +138,8 @@ color:white;
     text-decoration: none;
     transition: transform 0.3s;
     opacity: 1; /* 80% transparency */
-    margin-bottom: 20px; /* Added space between rows */
+  /*  margin-bottom: 20px;  Added space between rows */
+    margin: 10px;
     color: #3B3B3B; /* Black font color */
    /*  border: 1px solid #ddd; Border added back */
   }
@@ -163,6 +164,8 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     background-color: #3B3B3B;
     display: block; /* Ensures no inline spacing */
     margin: 0 auto 10px; /* Centered logo */
+
+    width: 180px;
   }
   .card-name {
     font-weight: bold;
