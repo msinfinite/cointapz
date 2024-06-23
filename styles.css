@@ -27,8 +27,9 @@ ul.nav {
     display: flex;
     list-style: none;
     color: white;
-    margin-bottom: 30px;
+/*  margin-bottom: 30px;   */
     justify-content: center;
+    align-items: center;
 }
 
         li.nav-item {
@@ -36,11 +37,20 @@ ul.nav {
             border-bottom: 2px solid transparent;
             font-family: sans-serif; /* Sans-serif font */
             transition: border-color 0.3s; /* Smooth animation */
+		transition: 0.3s;
         }
         li.nav-item.active {
-            border-bottom-color: gold;
-            margin-bottom: -4px; /* Extend the underline down */
-            font-weight: bold; /* Bold font */
+
+    margin-bottom: -4px;
+    font-weight: bold;
+    background: #333333;
+    border-radius: 1rem;
+    padding: 0.8rem;
+	  border-bottom-color: gold;
+
+		    transition: background 0.3s;
+		transition: 0.3s;
+		
         }
 
 
