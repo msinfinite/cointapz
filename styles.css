@@ -46,10 +46,10 @@ ul.nav {
     background: #333333;
     border-radius: 1rem;
     padding: 0.8rem;
-	  border-bottom-color: gold;
+ border-bottom-color: gold;
 
-		    transition: background 0.3s;
-		transition: 0.3s;
+transition: background 0.3s;
+
 		
         }
 
