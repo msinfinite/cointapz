@@ -52,7 +52,7 @@ ul.nav {
     display: flex;
     list-style: none;
     color: white;
- margin-bottom: 0px;  
+ margin-bottom: 40px;  
     justify-content: center;
     align-items: center;
 }
