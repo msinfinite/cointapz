@@ -256,7 +256,7 @@ color: white;
   border-radius: 50%;
   display: inline-block;
   margin-right: 5px;
-  animation: smoothBlinker 1s ease-in-out infinite;
+  animation: smoothBlinker 2s ease-in-out infinite;
 }
 
 @keyframes smoothBlinker {
