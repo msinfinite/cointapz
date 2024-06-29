@@ -53,6 +53,7 @@
             cursor: pointer;
         }
         .nav-item.active {
+		border-top: 4px solid transparent; /* make over jumps */
             border-top: 4px solid #ffd700; /* Smaller line */
 color:gold;
 font-weight: 700;
