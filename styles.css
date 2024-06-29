@@ -58,11 +58,15 @@ ul.nav {
 }
 
         li.nav-item {
-         /*   margin-right: 42px; */
+		 
+         margin-right: 42px; 
             border-bottom: 2px solid transparent;
             font-family: sans-serif; /* Sans-serif font */
             transition: border-color 0.3s; /* Smooth animation */
 		transition: 0.3s;
+		
+
+		
         }
         li.nav-item.active {
 
