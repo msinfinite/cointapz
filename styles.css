@@ -35,6 +35,7 @@
             background-color: #1a1a1a;
             padding: 10px; /* Adjust as needed */
 	   z-index: 9998; /* Higher value to ensure it's on top */
+	   border-top: 1px solid #434223;
 
         }
 
