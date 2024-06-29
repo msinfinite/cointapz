@@ -33,7 +33,7 @@
             justify-content: space-evenly;
             align-items: center;
             position: fixed;
-            bottom: 10%;
+            bottom: 5%;
             width: 85%;
             left: 7.5%;
             background-color: rgba(0, 0, 0, 0.8);
@@ -235,7 +235,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .to-top {
     display: none;
     position: fixed;
-    bottom: 120px;
+    bottom: 160px;
     right: 20px;
     cursor: pointer;
     background-color: #252525;
