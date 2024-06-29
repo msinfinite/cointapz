@@ -27,6 +27,22 @@
 
 
 
+        .nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: darkgray;
+            padding: 10px; /* Adjust as needed */
+        }
+
+        .nav-item {
+            display: block;
+            /* Add any other styling you need for the buttons */
+        }
+
+
+
 
  /* Basic styling for the navigation bar */
 ul.nav {
