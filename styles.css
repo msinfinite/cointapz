@@ -53,7 +53,7 @@
             cursor: pointer;
         }
         .nav-item.active {
-		border-top: 4px solid transparent; /* make over jumps */
+
             border-top: 4px solid #ffd700; /* Smaller line */
 color:gold;
 font-weight: 700;
@@ -61,6 +61,7 @@ transition: 0.3s;
 
         }
         .nav-item:not(.active):hover {
+	   border-top: 4px solid transparent; /* make over jumps */
             background-color: rgba(255, 255, 255, 0.2);
         }
 
