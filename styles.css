@@ -52,7 +52,7 @@ ul.nav {
     display: flex;
     list-style: none;
     color: white;
- margin-bottom: 40px;  
+ margin-bottom: 50px;  
     justify-content: center;
     align-items: center;
 }
@@ -248,7 +248,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   .to-top {
     display: none;
     position: fixed;
-    bottom: 80px;
+    bottom: 120px;
     right: 20px;
     cursor: pointer;
     background-color: #252525;
