@@ -34,6 +34,8 @@
             width: 100%;
             background-color: #1d1d1d;
             padding: 10px; /* Adjust as needed */
+	   z-index: 9998; /* Higher value to ensure it's on top */
+
         }
 
         .nav-item {
