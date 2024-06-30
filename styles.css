@@ -166,7 +166,8 @@ body, html {
     position: relative; /* Ensure it's visible under the header */
  /*   padding-top: 80px;  Add space for the fixed header */
   }
-  .back-icon {
+
+  .left-header {
     position: absolute;
     top: 15px;
     left: 15px;
@@ -174,6 +175,18 @@ body, html {
 font-size:24px;
 color:white;
   }
+
+  .right-header {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+font-size:24px;
+color:white;
+  }
+
+
+
   .search-box {
     border-radius: 10px;
         padding: 10px 20px;
