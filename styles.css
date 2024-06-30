@@ -160,6 +160,7 @@ body, html {
  /*    height: 80px; */
   }
   .description {
+	  font-size: 18px;
     text-align: center;
  /*   padding: 50px 20px 0;  Reduced top padding */
     color: #fff; /* Description text color changed to white */
