@@ -4,7 +4,7 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: pointer;
     height: 20px; /* Adjust size as needed */
     width: 20px; /* Adjust size as needed */
-    background-image: url("cancel.svg"); /* Replace with your image URL */
+    background-image: url("cancel.png"); /* Replace with your image URL */
 }
 
 
