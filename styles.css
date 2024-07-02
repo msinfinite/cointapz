@@ -223,6 +223,7 @@ body, html {
  /*    height: 80px; */
   }
   .description {
+	  padding-bottom: 1rem;
 	  font-size: 14px;
     text-align: center;
  /*   padding: 50px 20px 0;  Reduced top padding */
