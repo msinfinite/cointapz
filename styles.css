@@ -1,3 +1,63 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; /* Reduced padding */
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s;
+  opacity: 1; /* 80% transparency */
+  margin: 10px;
+  color: #3B3B3B; /* Black font color */
+  position: relative; /* Add this */
+}
+
+.icon {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+.card-header {
+  background-color: #3B3B3B;
+  padding: 10px;
+  text-align: center; /* Centered card name */
+  color: white;
+  background-image: linear-gradient(to bottom, #434344, #3d3d3e, #373737, #313131, #2b2b2b);
+}
+
+.card-logo {
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  background-color: #3B3B3B;
+  display: block; /* Ensures no inline spacing */
+  margin: 0 auto 10px; /* Centered logo */
+  width: 180px;
+}
+
+.card-name {
+  font-weight: bold;
+  display: block; /* Ensures no inline spacing */
+  margin-bottom: 10px; /* Space below the name */
+}
+
+.card-info {
+  padding: 10px;
+  background-color: #333333;
+  font-size: 0.8em; /* Smaller font size for total players */
+  color: white;
+  position: relative; /* Add this */
+}
+
+
+
+
+
+
 .responsive-image {
     width: 220px;
     height: auto;
@@ -214,64 +274,7 @@ color:white;
 
 
 
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-   /*  justify-content: space-around; Changed to space-around for even spacing */
- justify-content: center;
-    padding: 20px; /* Reduced padding */
-
-  }
-  .card {
-/*     flex-basis: calc(50% - 20px);   Adjusted for two cards per row */
-    border-radius: 15px;
-    overflow: hidden;
-    text-decoration: none;
-    transition: transform 0.3s;
-    opacity: 1; /* 80% transparency */
-  /*  margin-bottom: 20px;  Added space between rows */
-    margin: 10px;
-    color: #3B3B3B; /* Black font color */
-   /*  border: 1px solid #ddd; Border added back */
-  }
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-  }
-  .card-header {
-    background-color: #3B3B3B;
-    padding: 10px;
-    text-align: center; /* Centered card name */
-color: white;
-/* background-color: #33333380;  */
- background-image: linear-gradient(to bottom, #434344, #3d3d3e, #373737, #313131, #2b2b2b);
-/* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 100 100'%3E%3Crect x='0' y='0' width='46' height='46' fill-opacity='0.02' fill='%23000000'/%3E%3C/svg%3E");  */
-
-
-  }
-  .card-logo {
- /*    width: 100%; Full width */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 50%;
-    background-color: #3B3B3B;
-    display: block; /* Ensures no inline spacing */
-    margin: 0 auto 10px; /* Centered logo */
-
-    width: 180px;
-  }
-  .card-name {
-    font-weight: bold;
-    display: block; /* Ensures no inline spacing */
-    margin-bottom: 10px; /* Space below the name */
-  }
-  .card-info {
-    padding: 10px;
-    background-color: #333333;
-    font-size: 0.8em; /* Smaller font size for total players */
-    color: white;
-    position: relative; /* Add this */
-  }
-.status-light {
+  .status-light {
   width: 10px;
   height: 10px;
   border-radius: 50%;
