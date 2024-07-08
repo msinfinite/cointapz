@@ -58,16 +58,25 @@
 
 
 
-
-
-
 .responsive-image {
     width: 220px;
     height: auto;
     display: block;
-    margin: 0 auto; /* This centers the image horizontally */
-	padding-top: 40px;
+    margin: 0 auto;
+    padding-top: 40px;
+    animation: bounce 3s infinite alternate ease-in-out;
 }
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
 
 
 
