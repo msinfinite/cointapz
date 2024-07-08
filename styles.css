@@ -1,7 +1,7 @@
 h1 {
 	text-align: center;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -13,7 +13,7 @@ h1 span {
 
 h1 span::before {
     content: "";
-    height: 20px;
+    height: 40px;
     width: 2px;
     position: absolute;
     top: 50%;
