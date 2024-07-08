@@ -119,10 +119,10 @@
 
 .verify {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 36px; /* Set the desired icon size */
-  }
+    top: 8px;
+    right: 4px;
+    width: 22px;
+}
 
 
 #loading {
