@@ -29,6 +29,7 @@ h1 span::before {
     background: gold;
     transform: translateY(-45%);
     animation: blink 0.7s infinite;
+	    font-size: 1.5rem;
 }
 
 h1 span.stop-blinking::before {
