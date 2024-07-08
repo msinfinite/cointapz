@@ -21,7 +21,7 @@ h1 span {
 
 h1 span::before {
     content: "";
-    height: 40px;
+    height: 24px;
     width: 2px;
     position: absolute;
     top: 50%;
