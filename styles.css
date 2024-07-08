@@ -1,10 +1,12 @@
 h1 {
+	text-align: center;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
 }
 
 h1 span {
+	text-align: center;
     color: gold;
     position: relative;
 }
