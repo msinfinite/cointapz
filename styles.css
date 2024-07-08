@@ -62,9 +62,8 @@
     width: 220px;
     height: auto;
     display: block;
-    margin: 0 auto;
-    padding-top: 40px;
-    animation: bounce 6s infinite alternate ease-in-out;
+    margin: 0 auto; /* This centers the image horizontally */
+	padding-top: 40px;
 }
 
 @keyframes bounce {
