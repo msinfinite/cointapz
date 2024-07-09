@@ -23,13 +23,56 @@
 </div>
 
 
-  
-
 <div class="header">
   <a href="https://t.me/cointapz"><img src="logo.png" alt="Logo" class="logo"></a>
 <div class="left-header" >🔁 July 2024</div> 
  <div class="right-header" ><div id="botsCount"></div></div> 
 </div>
+
+
+
+      <label for="themeToggle">
+        <img src="light.svg" alt="Light Theme" id="lightImage">
+        <img src="dark.svg" alt="Dark Theme" id="darkImage" style="display: none;">
+    </label>
+    <input type="checkbox" id="themeToggle" style="display: none;">
+
+
+
+
+  <!-- Your script container -->
+    <div id="scriptContainer">
+        <!-- Your script content -->
+        <script>
+            const themeToggle = document.getElementById("themeToggle");
+            const themeStylesheet = document.getElementById("themeStylesheet");
+            const lightImage = document.getElementById("lightImage");
+            const darkImage = document.getElementById("darkImage");
+
+            // Set the initial state to unchecked (light theme)
+            themeToggle.checked = false;
+
+            themeToggle.addEventListener("change", () => {
+                const scriptContainer = document.getElementById("scriptContainer");
+                if (themeToggle.checked) {
+                    // Switch to light theme
+                    themeStylesheet.href = "light.css";
+                    lightImage.style.display = "none";
+                    darkImage.style.display = "inline";
+                    scriptContainer.style.opacity = 1; // Fade in
+                } else {
+                    // Switch to default theme
+                    themeStylesheet.href = "styles.css";
+                    lightImage.style.display = "inline";
+                    darkImage.style.display = "none";
+                    scriptContainer.style.opacity = 0; // Fade out
+                }
+            });
+        </script>
+    </div>
+
+  
+
   
 
 <img src="element.png" alt="Element" class="responsive-image">
