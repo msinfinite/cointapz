@@ -1,6 +1,15 @@
 /* Importing Google font - Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+.theme {
+    /* display: block; */
+    margin: 0 auto;
+    padding-top: 60px;
+    margin: 5px;
+    position: absolute;
+}
+
+
 h1 {
 
     padding: 0;
