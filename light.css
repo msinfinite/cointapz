@@ -1,0 +1,448 @@
+/* Importing Google font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+h1 {
+
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+	
+	text-align: center;
+    color: #1c1c1c;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+h1 span {
+	text-align: center;
+    color: #e27c00;
+    position: relative;
+}
+
+h1 span::before {
+    content: "";
+    height: 24px;
+    width: 2px;
+    position: absolute;
+    top: 50%;
+    right: -8px;
+    background: #e27c00;
+    transform: translateY(-45%);
+    animation: blink 0.7s infinite;
+	    font-size: 1.5rem;
+}
+
+h1 span.stop-blinking::before {
+    animation: none;
+}
+
+@keyframes blink {
+    50% { opacity: 0 }
+}
+
+
+
+
+
+
+.live {
+	width: 24px;
+}
+
+.active-section {
+    display: flex;
+    /* flex-direction: row; */
+    align-content: stretch;
+    align-content: flex-end;
+    /* justify-content: flex-start; */
+	align-items: flex-end;
+
+}
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px; /* Reduced padding */
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s;
+  opacity: 1; /* 80% transparency */
+  margin: 10px;
+  color: #3B3B3B; /* Black font color */
+  position: relative; /* Add this */
+}
+
+.card:hover {
+  transform: scale(1.00); /* Enlarge on hover */
+    box-shadow: -2px 2px 0px 0px rgb(252 140 0 / 47%);
+  transition: all 0.2s ease-in-out;
+}
+
+.icon {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+}
+
+.card-header {
+
+  padding: 10px;
+  text-align: center; /* Centered card name */
+  color: 1c1c1c;
+    background-image: linear-gradient(to bottom, #eeeeee, #dbdbdb);
+}
+
+.card-logo {
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: block; /* Ensures no inline spacing */
+  margin: 0 auto 10px; /* Centered logo */
+  width: 180px;
+
+}
+
+.card-name {
+  font-weight: bold;
+  display: block; /* Ensures no inline spacing */
+  margin-bottom: 10px; /* Space below the name */
+}
+
+.card-info {
+  padding: 10px;
+  background-color: #e7e7e7;
+  font-size: 0.8em; /* Smaller font size for total players */
+  color: 1c1c1c;
+  position: relative; /* Add this */
+}
+
+
+
+.responsive-image {
+    width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* This centers the image horizontally */
+	padding-top: 40px;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+
+
+
+
+.gradient-div {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+background: linear-gradient(to top, rgb(255 163 0 / 32%), #ffffff00);
+
+    z-index: 9995;
+}
+
+
+.copyright{
+
+    z-index: 9996;
+}
+
+
+
+
+.verify {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 22px;
+}
+
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+ backdrop-filter: blur(10px); /* Increased blur effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading {
+  z-index: 9999; /* Adjust as needed */
+  /* Other styles... */
+}
+
+
+
+
+ .navbar {
+	      z-index: 9998; /* Higher value to ensure it's on top */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            position: fixed;
+            bottom: 5%;
+            width: 85%;
+            left: 7.5%;
+background-color: rgb(255 255 255 / 54%);
+    border-radius: 50px;
+box-shadow: 0px 20px 20px 0px rgb(107 107 107 / 39%);
+    backdrop-filter: blur(10px);
+    border: 1px solid #ebebeb;
+        }
+        .nav-item {
+            
+            text-align: center;
+            padding: 10px;
+            color: #1c1c1c;
+            transition: transform 0.2s ease;
+            cursor: pointer;
+        }
+        .nav-item.active {
+
+            border-top: 4px solid #e27c00; /* Smaller line */
+color:#e27c00;
+font-weight: 700;
+transition: 0.3s;
+		    background: linear-gradient(0deg, rgb(198 140 0 / 0%) 0%, rgb(255 102 0 / 9%) 100%)
+
+        }
+        .nav-item:not(.active):hover {
+	 border-top: 4px solid transparent;  /*  make over jumps */
+                background-color: rgb(255 255 255 / 20%);
+        }
+
+/*
+        .nav-icon {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+*/
+        .nav-text {
+            font-size: 14px;
+        }
+
+
+
+
+
+
+
+body, html {
+
+/* Disable Selecting */
+
+
+	  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+
+	
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Vazirmatn", sans-serif;
+    background-image: url('bg2.svg');
+    background-color: #f7f7f7;  Dark gray background
+    background-repeat: repeat;
+	
+    color: #000; /* Black font color */
+/* disable horizontal scroll */
+    max-width: 100%;
+    overflow-x: hidden;
+
+  }
+  .header {
+    background-color: rgb(118, 246, 52 / 80%);
+
+    padding-block: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s;
+    backdrop-filter: blur(10px); /* Increased blur effect */
+    border-bottom: 1px solid #bbbbbb;
+  }
+  .logo {
+    display: flex; 
+    margin: auto;
+  /*  margin-left: 9rem;  */
+   /*  border-radius: 50%;  */
+    width: 80px;
+ /*    height: 80px; */
+  }
+  .description {
+	      line-height: 2rem;
+	  padding-bottom: 1rem;
+	  font-size: 14px;
+    text-align: center;
+ /*   padding: 50px 20px 0;  Reduced top padding */
+    color: #1c1c1c; /* Description text color changed to white */
+    position: relative; /* Ensure it's visible under the header */
+ /*   padding-top: 80px;  Add space for the fixed header */
+  }
+
+  .left-header {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    cursor: pointer;
+font-size:12px;
+color:1c1c1c;
+  }
+
+  .right-header {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+font-size:12px;
+color:1c1c1c;
+  }
+
+
+
+  .search-box {
+    border-radius: 10px;
+        padding: 10px 20px;
+        margin: 0 auto 20px;
+        width: 90%;
+
+    /*    box-shadow: inset 1px 1px 8px 20px #251a1a; */
+        border-style: none;
+        color: black;
+    border: 1px solid #c0c0c0;
+  }
+
+
+.clear-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: 1c1c1c;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+  .status-light {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+  animation: smoothBlinker 2s ease-in-out infinite;
+}
+
+@keyframes smoothBlinker {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+  .green {
+    background-color: green;
+  }
+  .red {
+    background-color: red;
+  }
+  .gray {
+    background-color: gray;
+  }
+  .to-top {
+    display: none;
+    position: fixed;
+    bottom: 160px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #ffffffab;
+    border-radius: 50rem;
+	  
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.3rem;
+    z-index: 9997;
+
+	  box-shadow: 0px 9px 20px 0px rgb(0 0 0 / 20%)
+  }
+
+  /* Responsive adjustments for mobile view */
+  @media (max-width: 600px) {
+    .card-container {
+      padding: 10px; /* Reduced padding for mobile */
+    }
+    .card {
+   /*   flex-basis: 100%;  Full width cards on mobile */
+      margin-bottom: 10px; /* Reduced space between cards */
+      flex-basis: calc(50% - 20px); /* two cards in a row for mobile */
+    }
+    .card-logo {
+      width: 120px; /* Fixed width to prevent deformation */
+      height: 120px; /* Fixed height to maintain aspect ratio */
+      object-fit: cover; /* Ensures the image doesn't get distorted */
+    }
+
+
+
+	.card {
+ 	 position: relative; 
+	}
+
+	.icon {
+	 position: absolute;
+ 	 top: 10px;
+ 	 right: 20px; 
+  	 width: 20px; 
+  	 height: 20px; 
+ 	 background-image: url('icon-path.png');
+ 	 background-size: cover;
+}
+  }
+
+
+  @media (min-width: 600px) {
+
+	 .icon {
+	height: 0px;
+ 	 background-image: url('icon-path.png');
+ 	 background-size: cover;
+	 }
+
+    
+    
+  }
