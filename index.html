@@ -30,48 +30,12 @@
 </div>
 
 
-
-      <label for="themeToggle">
+    <label for="themeToggle" class="theme">
         <img src="light.svg" alt="Light Theme" id="lightImage">
         <img src="dark.svg" alt="Dark Theme" id="darkImage" style="display: none;">
     </label>
     <input type="checkbox" id="themeToggle" style="display: none;">
 
-
-
-
-  <!-- Your script container -->
-    <div id="scriptContainer">
-        <!-- Your script content -->
-        <script>
-            const themeToggle = document.getElementById("themeToggle");
-            const themeStylesheet = document.getElementById("themeStylesheet");
-            const lightImage = document.getElementById("lightImage");
-            const darkImage = document.getElementById("darkImage");
-
-            // Set the initial state to unchecked (light theme)
-            themeToggle.checked = false;
-
-            themeToggle.addEventListener("change", () => {
-                const scriptContainer = document.getElementById("scriptContainer");
-                if (themeToggle.checked) {
-                    // Switch to light theme
-                    themeStylesheet.href = "light.css";
-                    lightImage.style.display = "none";
-                    darkImage.style.display = "inline";
-                    scriptContainer.style.opacity = 1; // Fade in
-                } else {
-                    // Switch to default theme
-                    themeStylesheet.href = "styles.css";
-                    lightImage.style.display = "inline";
-                    darkImage.style.display = "none";
-                    scriptContainer.style.opacity = 0; // Fade out
-                }
-            });
-        </script>
-    </div>
-
-  
 
   
 
@@ -1801,6 +1765,29 @@
 <div class="to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"><img src="up.svg" width="24" height="24"></div>
 
 <script>
+
+  // theme
+          const themeToggle = document.getElementById("themeToggle");
+        const themeStylesheet = document.getElementById("themeStylesheet");
+        const lightImage = document.getElementById("lightImage");
+        const darkImage = document.getElementById("darkImage");
+
+        // Set the initial state to unchecked (light theme)
+        themeToggle.checked = false;
+
+        themeToggle.addEventListener("change", () => {
+            if (themeToggle.checked) {
+                themeStylesheet.href = "light.css"; // Path to your light theme CSS
+                lightImage.style.display = "none";
+                darkImage.style.display = "inline";
+            } else {
+                themeStylesheet.href = "styles.css"; // Path to your default CSS
+                lightImage.style.display = "inline";
+                darkImage.style.display = "none";
+            }
+        });
+
+  
 
 
 const dynamicText = document.querySelector("h1 span");
