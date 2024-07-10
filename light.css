@@ -89,7 +89,7 @@ h1 span.stop-blinking::before {
   transition: transform 0.3s;
   opacity: 1; /* 80% transparency */
   margin: 10px;
-  color: #3B3B3B; /* Black font color */
+  color: #181818; /* Black font color */
   position: relative; /* Add this */
 }
 
