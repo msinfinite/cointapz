@@ -110,7 +110,7 @@ h1 span.stop-blinking::before {
   padding: 10px;
   text-align: center; /* Centered card name */
   color: 1c1c1c;
-    background-image: linear-gradient(to bottom, #eeeeee, #dbdbdb);
+    background-image: linear-gradient(to bottom, #f5f5f5, #eaeaea);
 }
 
 .card-logo {
@@ -131,7 +131,7 @@ h1 span.stop-blinking::before {
 
 .card-info {
   padding: 10px;
-  background-color: #f2f2f2;
+  background-color: #f3f3f3;
   font-size: 0.8em; /* Smaller font size for total players */
   color: 1c1c1c;
   position: relative; /* Add this */
