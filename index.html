@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Cointapz Bot</title>
 
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0 />  -->
 <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">  -->
@@ -2073,6 +2074,23 @@ sortCards();
         document.getElementById('botsCount').textContent = `🤖 ${numberOfCardHeaders} Bots`;
 
 
+
+
+          // Use JavaScript to request full-screen mode
+        document.addEventListener('DOMContentLoaded', function() {
+            var content = document.getElementById('content');
+            content.addEventListener('click', function() {
+                if (content.requestFullscreen) {
+                    content.requestFullscreen();
+                } else if (content.mozRequestFullScreen) { /* Firefox */
+                    content.mozRequestFullScreen();
+                } else if (content.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                    content.webkitRequestFullscreen();
+                } else if (content.msRequestFullscreen) { /* IE/Edge */
+                    content.msRequestFullscreen();
+                }
+            });
+        });
 
 </script>
 
