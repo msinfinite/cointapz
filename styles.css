@@ -3,6 +3,7 @@
 
 input:focus {
     outline: none;
+	background-color: #2e2e2e;
 }
 
 .copyright {
