@@ -212,6 +212,11 @@ font-weight: bold;
     cursor: pointer;
 }
 
+.icon-copy:active{
+    color: #5499ff;
+	font-weight:bold;
+}
+
 
     </style>
 </head>
@@ -220,7 +225,7 @@ font-weight: bold;
 
 
     <div class="header">
-        <img src="cglogo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
         <p class="title">Cryptocurrency Glossary Of Terms & Acronyms</p>
         <input type="search" class="searchbox" id="searchInput" placeholder="Search...">
 <div class="alphabet-buttons">
@@ -262,14 +267,6 @@ font-weight: bold;
 
 <!-////////////////////////////////////////////////////////////////>
 
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 
 
@@ -2896,42 +2893,60 @@ A zParachain is an approach to bridging where a dedicated blockchain in the broa
 
 <!-////////////////////////////////////////////////////////////////>
 <script>
-    const searchInput = document.getElementById('searchInput');
+   const searchInput = document.getElementById('searchInput');
     const sections = document.querySelectorAll('.section');
     const alphabetButtons = document.querySelectorAll('.alphabet-button');
 
     // Handle search input (optional)
     searchInput.addEventListener('input', handleSearch);
-
+	
 function handleSearch(event) {
     const searchTerm = event.target.value.toLowerCase();
     let hasResults = false; // Flag to track if any results match the search term
 
     sections.forEach(section => {
         const sectionTitle = section.querySelector('.section-title').textContent.toLowerCase();
-if (sectionTitle.includes(searchTerm)) {
-    section.style.display = 'block';
-    hasResults = true;
-} else {
-    section.style.display = 'none';
-    const existingNothingFoundElement = document.querySelector('.nothing-found');
-    if (!existingNothingFoundElement) {
-        const nothingFoundElement = document.createElement('p');
-        nothingFoundElement.textContent = 'Nothing Found';
-        nothingFoundElement.classList.add('nothing-found');
-        document.body.appendChild(nothingFoundElement);
+        if (sectionTitle.includes(searchTerm)) {
+            section.style.display = 'block';
+            hasResults = true;
+        } else {
+            section.style.display = 'none';
+        }
+    });
+
+    // Toggle visibility of the big-letter div
+    const bigLetterDivs = document.querySelectorAll('.big-letter');
+    let foundBigLetter = false; // Flag to track if any big letter matches the search term
+
+    bigLetterDivs.forEach(div => {
+        const bigLetter = div.textContent.toLowerCase();
+        if (bigLetter.includes(searchTerm)) {
+            div.style.display = 'block'; // Show the big letter
+            foundBigLetter = true;
+        } else {
+            div.style.display = 'none'; // Hide the big letter
+        }
+    });
+
+    // Display "Nothing Found" if no results
+    const nothingFoundElement = document.querySelector('.nothing-found');
+    if (!hasResults && !foundBigLetter) {
+        if (!nothingFoundElement) {
+            const nothingFoundElement = document.createElement('p');
+            nothingFoundElement.textContent = 'Nothing Found';
+            nothingFoundElement.classList.add('nothing-found');
+            document.body.appendChild(nothingFoundElement);
+        }
+    } else if (nothingFoundElement) {
+        nothingFoundElement.remove(); // Remove "Nothing Found" if results are found
     }
 }
 
-    });
 
-// Toggle visibility of the big-letter div
-const bigLetterDivs = document.querySelectorAll('.big-letter');
-bigLetterDivs.forEach(div => {
-    div.style.display = hasResults ? 'block' : 'none';
-});
 
-}
+
+
+
 
 
 
@@ -2962,7 +2977,6 @@ copyIcons.forEach((icon) => {
             const description = section.querySelector('.section-description').textContent;
             const textToCopy = `${title} ${description}`;
             navigator.clipboard.writeText(textToCopy).then(() => {
-                alert('Text copied to clipboard!');
             });
         }
     });
