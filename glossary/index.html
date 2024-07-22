@@ -41,6 +41,8 @@ background-size: 400px 400px;
             text-align: center;
             padding: 10px 0;
 backdrop-filter: blur(10px);
+    transition: transform 0.3s ease; /* Add this line */
+
         }
         .logo {
             max-width: 100px;
@@ -188,6 +190,14 @@ padding-left: 1rem;
 
     padding-right: 1rem;
 	
+	scrollbar-width: none;
+	
+}
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.nav::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -299,7 +309,7 @@ position: relative;
     color: #fff;
     padding: 6px;
     border-radius: 1rem;
-	    margin-top: 2.5rem;
+	    margin-top: 3rem;
 }
 .ct-language:hover .ct-language__dropdown{
 	max-height: 1000px;
@@ -435,6 +445,8 @@ position: relative;
 
 
 
+
+
 <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
@@ -485,7 +497,6 @@ position: relative;
         <span class="icon-copy">📋 Copy</span>
        <!-- <span class="icon-share">↗️ Share</span> -->
     </div>
-
 
  </div>  <div class="section"> <h2 class="section-title">
 1hr</h2> <p class="section-description">
@@ -3182,6 +3193,27 @@ copyIcons.forEach((icon) => {
             });
         }
     });
+});
+
+
+
+//hide header when scrolling down
+
+let prevScrollPos = window.pageYOffset;
+
+window.addEventListener("scroll", function() {
+    const currentScrollPos = window.pageYOffset;
+    const header = document.querySelector(".header");
+
+    if (currentScrollPos > prevScrollPos) {
+        // Scrolling down: Collapse the header
+        header.style.transform = "translateY(-100%)";
+    } else {
+        // Scrolling up: Show the header
+        header.style.transform = "translateY(0)";
+    }
+
+    prevScrollPos = currentScrollPos;
 });
 
 
