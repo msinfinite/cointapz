@@ -23,6 +23,25 @@
 	@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
+        .nothing-found {
+            font-size: larger;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content {
+            flex: 1;
+        }
+
 .fa, .fas {
     font-weight: 900;
     font-size: x-small;
@@ -39,6 +58,7 @@
     text-decoration: none;
 	Color: gray;
 	bottom: 0;
+	padding: 20px;
 }
 
 a:hover, a:visited, a:link, a:active
@@ -55,9 +75,13 @@ input:focus {
 }
 
         body {
-            font-family: Quicksand;
-            margin: 0;
+		           margin: 0;
             padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+			
+            font-family: Quicksand;
 background-image: url("paper.jpg"); background-repeat: repeat;
 
 
@@ -244,9 +268,8 @@ padding-left: 1rem;
     font-size: larger;
     font-weight: bold;
     display: flex;
-    align-content: flex-end;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     color: gray;
 }
 
@@ -409,7 +432,7 @@ box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rg
 <body>
 
 
-
+<div class="content">
 
     <div class="header">
         <img src="logo.svg" alt="Logo" class="logo">
@@ -3136,13 +3159,13 @@ A zParachain is an approach to bridging where a dedicated blockchain in the broa
 </div>
 
 
+ </div>
 
 
 
 
 
-
-	<div class="copyright notranslate">  <a href="https://t.me/cointapz"> @cointapz copyright  </a> </div>
+	<div class="copyright notranslate">  <a href="https://t.me/cointapz">@cointapz</a> </div>
 
 
 
@@ -3185,17 +3208,18 @@ function handleSearch(event) {
     });
 
     // Display "Nothing Found" if no results
-    const nothingFoundElement = document.querySelector('.nothing-found');
-    if (!hasResults && !foundBigLetter) {
-        if (!nothingFoundElement) {
-            const nothingFoundElement = document.createElement('p');
-            nothingFoundElement.textContent = 'Nothing Found';
-            nothingFoundElement.classList.add('nothing-found');
-            document.body.appendChild(nothingFoundElement);
-        }
-    } else if (nothingFoundElement) {
-        nothingFoundElement.remove(); // Remove "Nothing Found" if results are found
+const nothingFoundElement = document.querySelector('.nothing-found');
+if (!hasResults && !foundBigLetter) {
+    if (!nothingFoundElement) {
+        const nothingFoundElement = document.createElement('img');
+        nothingFoundElement.src = 'nf.webp';
+        nothingFoundElement.alt = 'Nothing Found';
+        nothingFoundElement.classList.add('nothing-found');
+        document.body.appendChild(nothingFoundElement);
     }
+} else if (nothingFoundElement) {
+    nothingFoundElement.remove(); // Remove "image.svg" if results are found
+}
 }
 
 
